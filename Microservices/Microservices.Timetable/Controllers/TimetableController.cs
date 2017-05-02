@@ -15,6 +15,10 @@ namespace Microservices.Timetable.Controllers
             _timetableService = new TimetableService();
         }
 
+        /// <summary>
+        /// Returns all timetables.
+        /// </summary>
+        /// <returns>A JSON with all timetables.</returns>
         [Route("api/v1/timetables")]
         [HttpGet]
         public IHttpActionResult Get()
@@ -32,6 +36,11 @@ namespace Microservices.Timetable.Controllers
             }
         }
 
+        /// <summary>
+        /// Returns a timetable for the specific id parameter.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>A JSON with the specific timetable for requested id parameter.</returns>
         [Route("api/v1/timetable/{id}")]
         [HttpGet]
         public IHttpActionResult Get(int id)
